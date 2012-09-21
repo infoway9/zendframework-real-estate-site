@@ -1,0 +1,52 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<?php echo $this->headTitle(); ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+<script>
+$(document).ready(function(){
+   
+   $("#price").click(function(){
+     if($("#price").val()=='minimum')
+         {
+             $("#price").val('');
+         }
+   });
+   
+   $("#price_to").click(function(){
+     if($("#price_to").val()=='maximum')
+         {
+             $("#price_to").val('');
+         }
+   });
+   
+ });
+</script>
+</head>
+<body>
+<div id="main_container">
+
+<?php echo $this->render('include/header.phtml') ?>
+    
+
+    
+    <div id="main_content"> 
+    	
+                <?php echo $this->render('include/left.phtml') ?>
+        
+   		<?php echo $this->layout()->content; ?>
+   
+
+	</div>
+    <!-- end of main_content -->
+    
+<?php echo $this->render('include/footer.phtml') ?>
+
+
+</div>
+<!-- end of main_container -->
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Admin Login</title>
+<link href="<?php echo ROOT_PATH; ?>favicon.ico" rel="icon" />
+<link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/admin_style.css" type="text/css" />
+
+</head>
+<body>
+<div class="warpper_admin">
+	<div class="mcon">
+    	<div class="hdcont">
+
+            <div class="hdbimg">
+              <div class="hdblimg">Login</div>
+              <div class="hdbrimg"><img src="<?php echo $this->baseUrl('/'); ?>admin_images/admin_12.png" alt="" /></div>
+              <br clear="all" />
+          	</div>
+			<br class="clear" />
+            <div class="errorbox" id="signin_err_container" style="<?php if(isset($this->error_msg) && $this->error_msg  != "") echo 'display:block;'; else echo 'display:none;'; ?>"><?php if(isset($this->error_msg) && $this->error_msg  != "") echo $this->error_msg; ?></div>
+        </div>
+        <div class="bodycont">
+		<form action="" method="post">
+
+          <div class="bdmimg">
+                        	<div class="bdmtl" style="margin-top:20px">
+          	   <div class="bdmtx">User Name:</div>
+               <div class="bdtb"><input type="text" name="textusername" id="textusername" value="<?php if($this->textusername!="") {echo $this->textusername; } ?>"  class="adtarea"/></div>
+               <br clear="all" />
+            </div>
+            <div class="bdmtl">
+          	   <div class="bdmtx">Password:</div>
+
+                   <div class="bdtb"><input type="password" name="textpassword" id="textpassword" class="adtarea" value=""/>
+              </div>
+               <br clear="all" />
+            </div>
+            
+			
+			<div class="bdmtl">
+          	   <div class="bdmtx">&nbsp;</div>
+              
+               <br clear="all" />
+            </div>
+			
+			
+          
+            <div class="bdmtl">
+              <div class="bdtb">
+                  <div class="boxsubmit" style="width:68px;">
+<div class="btn_lnkblue buttonb3"><span><input name="submit_btn" type="submit" class="btn_submit" value="Submit" /></span></div>
+<br class="clr" />
+</div>
+
+              </div>
+               <br clear="all" />
+            </div>
+             
+          </div>
+        </form>
+           <br clear="all" />
+        </div>
+    </div>
+</div>
+</body>
+</html>

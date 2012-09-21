@@ -1,0 +1,52 @@
+<div class="pagination">
+    <?php 
+    
+    if(stristr($_SERVER['QUERY_STRING'],'search=y') )
+    {
+        $request_string="?".$_SERVER['QUERY_STRING'];
+    }
+ else {
+        
+    $request_string="";
+     
+    }
+    
+    
+    if($this->current=='1'): ?>
+<span class="disabled">
+<<
+</span>
+    <?php else: ?>
+    <a href="<?php echo $this->url(array('page'=>$page))?>">
+<<
+</a>
+    <?php endif; ?>
+    
+<?php foreach ($this->pagesInRange as $page): ?>
+    <?php if($this->current==$page): ?>
+<span class="current">
+    <?php else: ?>
+<a href="<?php echo $this->url(array('page'=>$page)).$request_string; ?>">
+    <?php endif; ?>
+    
+    <?php echo $page; ?>
+
+     <?php if($this->current==$page): ?>
+</span>
+    <?php else: ?>
+</a>
+    <?php endif; ?>
+<?php endforeach; ?>
+    
+   
+<?php if($this->current== $page): ?>
+<span class="disabled">
+>>
+</span>
+    <?php else: ?>
+    <a href="<?php echo $this->url(array('page'=>$page))?>">
+>>
+</a>
+    <?php endif; ?>
+    
+</div> 

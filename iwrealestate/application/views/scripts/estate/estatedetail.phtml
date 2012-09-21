@@ -1,0 +1,47 @@
+<div class="column4">
+        
+        <div class="title"><?php echo $this->estate_title; ?> </div> 
+        	
+     
+        </div><!-- end of column four -->       
+        
+   
+   		<div class="column2" style="background-color:#f3f5f6; margin-left:5px;">
+        
+        	<div class="big_pic"><img src="<?php echo get_estate_image_display_path($this->estate_image,'prev'); ?>"  alt="" title="" class="img_big_pic" /></div>
+            
+              
+                  	
+            
+        </div><!-- end of column two -->
+   
+
+
+
+
+   		<div class="column3">
+        
+            <div class="main_text_box">
+            <h1>Description</h1>
+            <p>
+            <?php echo $this->estate_description; ?>
+            </p>        
+        	</div>
+            
+            <div class="title2">Details:</div> 
+            
+            <div class="details_list">
+            <ul>
+            	<li><span>Price:</span>  $ <?php echo $this->estate_price; ?> </li>
+                <li><span>Location:</span>  <?php echo $this->estate_city.', '.$this->estate_country ?>  </li>
+                <li><span>Rooms:</span>  <?php echo $this->estate_tot_room; ?></li>
+                <li><span>Bathrooms:</span>  <?php echo $this->estate_tot_bath_room; ?></li>
+                <li><span>Surface:</span>  <?php echo $this->estate_surface; ?></li>
+                <li><span>Other utilities:</span> <?php echo $this->estate_other_utility; ?></li>
+            
+            </ul>
+            </div>
+            
+             
+
+	</div>

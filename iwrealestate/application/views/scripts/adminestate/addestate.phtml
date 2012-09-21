@@ -1,0 +1,178 @@
+<div id="menu" class="default">
+
+                <div class="floting-con"><a href="<?php echo ROOT_PATH.'admin/view-estate'; ?>" class="more">Estate List</a></div>
+            </div>
+<div class="mainBodyCon">
+
+                <!--Body right start-->
+
+                <div class="bodyRightCon">
+                    <div class="bodyRightightCon_inner">
+                        <div class="bcMenuCon">
+                            <div class="bcMenu" >
+                                <ul>
+                                    <li>Add Estate</li>
+                                    
+                                </ul>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <form name="" id="" action="" method="post"  enctype="multipart/form-data" >
+                            
+                            <div class="errorbox" id="signin_err_container" style="<?php if(isset($this->error_msg) && $this->error_msg  != "") echo 'display:block;'; else echo 'display:none;'; ?>"><?php if(isset($this->error_msg) && $this->error_msg  != "") echo $this->error_msg; ?></div>
+                            
+                            <div class="successbox" id="signin_err_container" style="<?php if(isset($this->success_msg) && $this->success_msg  != "") echo 'display:block;'; else echo 'display:none;'; ?>"><?php if(isset($this->success_msg) && $this->success_msg  != "") echo $this->success_msg; ?></div>
+                            
+                            <div class="conArea">
+                                <div class="conArea-big">
+
+                                    <!--Massage Start-->
+                                    <div>
+                                        <div class="err_contact" style="display:none;"></div>
+                                        <div class="success_contact" style="display:none;"></div>
+                                    </div>
+                                    <!--Massage End-->
+                                    
+                                    <div class="bdmt2">
+                                        <div class="label">Title*:</div>
+                                        <div class="field"><input type="text" name="texttitle" id="texttitle" value="<?php if($this->texttitle!="") {echo $this->texttitle; } ?>" class="adtarea"/></div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                    <div class="bdmt2">
+                                        <div class="label">Description*:</div>
+                                        <div class="field"><textarea name="textdescription" id="textdescription" class="adtarea" /><?php if($this->textdescription!="") {echo $this->textdescription; } ?></textarea></div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                    <div class="bdmt2 hidden">
+                                                <div class="label">Transaction Type*:</div>
+                                                 <div class="field">
+                                            <select name="selecttransaction" id="selecttransaction">
+                                                <option value="">--- Select Transaction type ---</option>
+                                                
+                                                <?php foreach($this->transaction_list_array as $k=>$v): ?>
+                                                    <option value="<?php echo $k; ?>" <?php if(isset($this->selecttransaction) && $this->selecttransaction==$k) { echo 'selected'; } ?> ><?php echo $v; ?></option>
+                                                <?php endforeach; ?>
+                                                    
+                                            </select>
+
+                                        </div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                    <div class="bdmt2">
+                                        <div class="label">Price($)*:</div>
+                                        <div class="field"><input type="text" name="textprice" id="textprice" value="<?php if($this->textprice!="") {echo $this->textprice; } ?>" class="adtarea"/></div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                    <div class="bdmt2">
+                                        <div class="label">Country*:</div>
+
+                                        <div class="field">
+                                            <select name="selectcountry" id="selectcountry">
+                                                <option value="">--- Select Country ---</option>
+                                                
+                                                <?php foreach($this->country_list_array as $v): ?>
+                                                    <option value="<?php echo $v['Id']; ?>" <?php if(isset($this->selectcountry) && $this->selectcountry==$v['Id']) { echo 'selected'; } ?> ><?php echo $v['Name']; ?></option>
+                                                <?php endforeach; ?>
+                                                    
+                                            </select>
+
+                                        </div>
+                                        <br clear="all" />
+                                    </div>
+
+                                    
+
+                                    <div class="bdmt2">
+                                        <div class="label">City*:</div>
+
+                                        <div class="field"><input type="text" name="textcity" id="textcity" value="<?php if($this->textcity!="") {echo $this->textcity; } ?>" class="adtarea"/></div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                    <div class="bdmt2">
+                                        <div class="label">Total Rooms*:</div>
+
+                                        <div class="field"><input type="text" name="texttotroom" id="texttotroom" value="<?php if($this->texttotroom!="") {echo $this->texttotroom; } ?>" class="adtarea"/></div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                    <div class="bdmt2">
+                                        <div class="label">Total Bathroom(s)*:</div>
+
+                                        <div class="field"><input type="text" name="texttotbathroom" id="texttotbathroom" value="<?php if($this->texttotbathroom!="") {echo $this->texttotbathroom; } ?>" class="adtarea"/></div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                    <div class="bdmt2">
+                                        <div class="label">Surface*:</div>
+
+                                        <div class="field"><input type="text" name="textsurface" id="textsurface" value="<?php if($this->textsurface!="") {echo $this->textsurface; } ?>" class="adtarea" /></div>
+                                        <br clear="all" />
+                                    </div>
+                                    
+                                                                        
+                                    <div class="bdmt2">
+                                        <div class="label">Other Utility:</div>
+
+                                        <div class="field"><input type="text" name="textutility" id="textutility" value="<?php if($this->textutility!="") {echo $this->textutility; } ?>" class="adtarea" /></div>
+                                        <br clear="all" />
+                                    </div>
+
+                                 
+                                    <div class="bdmt2">
+                                        <div class="label">Upload photo:</div>
+
+                                        <div class="field">
+                                            <div id="multi_upload">
+                                                <div id="upload1" class="uprow">
+                                                    <div id="file1" class="upfile">
+                                                        <input type="file" name="gallery_upload" id="gallery_upload" />
+                                                    </div>
+                                                    
+                                                   
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+										<br clear="all" />
+                                       
+                                    </div>
+                                    
+                                    <div class="bdmt2 hidden">
+                                                <div class="label">Offers:</div>
+                                                <div class="field"><input id="active" type="checkbox" <?php if ($this->specialtatus=="1") {echo "checked"; } ?> value="1" name="specialtatus" class="rBtn"><label class="chkdt" for="active"> Special</label>
+                                                </div>
+                                    </div> 
+                                    
+                                    <div class="bdmt2 hidden">
+                                                <div class="label">Status:</div>
+                                                <div class="field"><input id="active" type="radio" <?php if ($this->radiostatus=="1") {echo "checked"; } ?> value="1" name="radiostatus" class="rBtn"><label class="chkdt" for="active"> Active</label>
+                                                <input id="inactive" type="radio" <?php if ($this->radiostatus=="0") {echo "checked"; } ?> value="0" name="radiostatus" class="rBtn"><label class="chkdt" for="inactive"> Inctive</label></div>
+                                    </div> 
+									
+                                    <div class="bdmt2">
+                                        <div class="label"></div>
+                                        <div class="field">
+                                            <div class="btn"><input type="submit" name="submit_btn" id="submit_btn" value="Submit"/></div>
+                                        </div>
+                                        <br clear="all" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+                <!--Body right end-->
+
+                <div class="clr"></div>
+            </div><br class="push"/>

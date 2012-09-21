@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $this->meta_title;  ?></title>
+<link href="<?php echo ROOT_PATH; ?>favicon.ico" rel="icon" />
+<link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/admin_style.css" type="text/css" />
+</head>
+<body>
+<div class="container">
+<!--header start-->
+<div class="logoCon">
+
+<div class="logo"><a href="<?php echo ROOT_PATH.'admin/view-estate'; ?>"><img src="<?php echo ROOT_PATH; ?>admin_images/logo.gif" alt="" /></a></div>
+    <div class="txt">
+        <div> Administration control panel</div>
+    <div class="signOut">Hi, admin  |  <a href="<?php echo ROOT_PATH.'admin/logout'; ?>">Logout</a></div>
+    </div>
+    
+        <div class="clr"></div>
+  </div>                    
+
+            
+            
+            
+
+            <!--header end-->
+            <!--main body con start-->
+            <?php echo $this->layout()->content; ?>
+            <!--main body con start-->
+
+        </div>
+
+        <!--Footer Start-->
+<!--Footer Start-->
+<div class="footer">&copy; 2012 by companyname.com. All rights reserved. This material may not be duplicated for any profit-driven enterprise.</div>
+<!--Footer End-->
+
+
+    </body>
+</html>

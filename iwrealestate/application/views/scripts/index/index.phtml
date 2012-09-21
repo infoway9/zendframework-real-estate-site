@@ -1,0 +1,106 @@
+<style type="text/css">
+.wraptocenter {
+	
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 130px;
+    height: 130px;
+}
+.wraptocenter * {
+    vertical-align: middle;
+}
+/*\*//*/
+.wraptocenter {
+    display: block;
+}
+.wraptocenter span {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+}
+/**/
+</style>
+<!--[if lt IE 8]><style>
+.wraptocenter span {
+    display: inline-block;
+    height: 100%; 
+}
+</style><![endif]-->
+<div class="column2">
+        	<div class="main_text_box">
+            <h2>About Us</h2>
+            <p>
+ "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /><br />
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."            
+            </p>        
+        	</div>
+            
+        	<div class="main_text_box">
+            <h2>Request a proposal</h2>
+            <div class="proposal">
+           			<p class="proposal_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>        
+        	</div>            
+            
+            
+            
+            
+        </div><!-- end of column two -->
+   
+
+
+
+                
+   		<div class="column3">
+        	<div class="small_title">Latest offers</div> 
+            
+                <?php foreach ($this->normal_estate_detail as $v): ?>
+                
+            <div class="offer_box">
+            	<div class="floatL"><a  href="<?php echo ROOT_PATH.'details/'.$v['Id']; ?>"  class="wraptocenter"><span></span><img src="<?php echo get_estate_image_display_path($v['ImageName']); ?>"  alt="" title="" border="0"/></a></div>
+                <div class="offer_info">
+                <span>For <?php echo get_transaction_status($v['TransactionType']); ?>  $<?php echo $v['Price']; ?></span>
+                <p class="offer">
+                <?php echo substr($v['EstateDetail'],0,80); ?>             
+                </p>
+                <div class="more"><a href="<?php echo ROOT_PATH.'details/'.$v['Id']; ?>">...more</a></div>
+                </div>
+            </div>
+                
+                <?php endforeach; ?>
+            
+                      
+            
+        </div><!-- end of column three -->
+
+
+
+
+
+		<div class="column4">
+        
+        <div class="title">Special Offers</div> 
+        	
+        <?php foreach ($this->special_estate_detail_estate_detail as $v): ?>
+        
+             <div class="offer_box_wide">
+            	<div class="floatL"><a href="<?php echo ROOT_PATH.'details/'.$v['Id']; ?>"  class="wraptocenter"><img src="<?php echo get_estate_image_display_path($v['ImageName']); ?>" alt="" title="" border="0"/></a></div>
+                <div class="offer_info">
+                <span>For <?php echo get_transaction_status($v['TransactionType']); ?>  $<?php echo $v['Price']; ?></span>
+                <p class="offer">
+                 <?php echo substr($v['EstateDetail'],0,80); ?>                
+                </p>
+                <div class="more"><a href="<?php echo ROOT_PATH.'details/'.$v['Id']; ?>">...more</a></div>
+                </div>
+            </div>
+            
+           <?php endforeach; ?> 
+             
+
+
+
+
+        
+        </div><!-- end of column four -->

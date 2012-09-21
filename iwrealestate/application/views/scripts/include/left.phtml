@@ -1,0 +1,62 @@
+<div class="column1">
+        
+        
+        	<div class="left_box">
+            	<div class="top_left_box">
+                </div>
+                <div class="center_left_box">
+                	<div class="box_title"><span>Find</span> your place:</div>
+                    
+                        <form method="post" action="<?php echo ROOT_PATH; ?>post-search" >
+                    <div class="form">
+                    <div class="form_row"><label class="left">City: </label><input type="text" name="city" class="form_input" value="<?php if(isset($this->city)&& $this->city!="") { echo $this->city; } ?>"/></div>
+                    <div class="form_row"><label class="left">Price: </label><input type="text" name="price" id="price" class="form_input" value="<?php if(isset($this->price)&& $this->price!="") { echo $this->price; } else {echo 'minimum';} ?>"/></div>
+                    <div class="form_row"><label class="left">To: </label><input type="text" name="price_to" id="price_to" class="form_input" value="<?php if(isset($this->price_to)&& $this->price_to!="") { echo $this->price_to; } else {echo 'maximum';} ?>"/></div>
+                    <div class="form_row"><label class="left">Rooms: </label><input type="text" name="rooms" class="form_input" value="<?php if(isset($this->rooms)&& $this->rooms!="") { echo $this->rooms; } ?>" /></div>
+                    
+                    <div class="form_row"><label class="left_long">Looking for to:</label></div>
+                    <div class="form_row"><input type="radio" name="trans_type" value="1" <?php if(isset($this->trans_type_id)&& $this->trans_type_id=="1") { echo 'checked'; } ?> /> Sell home</div>
+                    <div class="form_row"><input type="radio" name="trans_type" value="2" <?php if(isset($this->trans_type_id)&& $this->trans_type_id=="2") { echo 'checked'; } ?> /> Rent home</div>
+                    
+                    <div style="float:right; padding:10px 25px 0 0;">
+                    <input type="submit" name="submit"/>
+                    </div>
+                    
+                    </div>
+                </form>
+                
+                </div>
+                <div class="bottom_left_box">
+                </div>
+            </div>
+            
+            
+ 
+        	<div class="left_box">
+            	<div class="top_left_box">
+                </div>
+                <div class="center_left_box">
+                	<div class="box_title"><span>Contact</span> information:</div>
+                    
+                    
+                    <div class="form">
+                    <div class="form_row">
+                    	<img src="<?php echo ROOT_PATH; ?>images/contact_envelope.gif" width="50" height="47" border="0" class="img_right" alt="" title="" />
+                        <div class="contact_information">
+                        Email: info@comapnyname.com<br />
+                        Telephone: 0234 789 90<br />
+                        Mobile:      234 345 234534<br />
+                        Fax:         34534 3456 3456(54)<br /><br />
+                        
+                        <span>www.companyname.com</span>
+                        </div>
+                    </div>                    
+                    </div>
+                
+                
+                </div>
+                <div class="bottom_left_box">
+                </div>
+            </div>  
+ 
+        </div><!-- end of column one -->

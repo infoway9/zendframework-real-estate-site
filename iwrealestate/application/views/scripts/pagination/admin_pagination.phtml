@@ -1,0 +1,33 @@
+<div class="pagiCon"> 
+           		<div class="pagi">                	
+                    <form action="" method="post">
+
+                    
+                    
+                    <div class="go">
+                        
+                        <div class="pre">
+                            <?php if($this->current > 1): ?>
+                            <a href="<?php echo $this->url(array('page'=>($this->current-1))); ?>"><img src="<?php echo ROOT_PATH; ?>admin_images/previous.jpg" alt="" height="15" width="15" border="0"/></a>
+                            <?php else: ?>
+                            <img src="<?php echo ROOT_PATH; ?>admin_images/previousD.jpg" alt="" height="15" width="15" border="0" />
+                            <?php endif; ?>
+                        </div>
+                        <div class="input"><input name="page" type="text" maxlength="4" value="<?php echo $this->current; ?>"/> of <?php echo count($this->pagesInRange); ?>
+                      	</div>
+                        
+                        <div class="nxt">
+                            <?php if($this->current != count($this->pagesInRange)): ?>
+                            <a href="<?php echo $this->url(array('page'=>($this->current+1))); ?>"><img src="<?php echo ROOT_PATH; ?>admin_images/next.jpg" alt="" height="15" width="15" border="0"/></a>
+                            <?php else: ?>
+                            <img src="<?php echo ROOT_PATH; ?>admin_images/nextD.jpg" alt="" height="15" width="15" border="0" />
+                            <?php endif; ?>
+                            
+                        </div>
+                        <div class="clr"></div>
+                    </div>                    </form>
+                    <div class="clr"></div>
+                </div>
+                
+           </div>
+		   

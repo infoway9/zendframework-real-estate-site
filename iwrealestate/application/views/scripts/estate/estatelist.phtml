@@ -1,0 +1,56 @@
+<div class="column4">
+        
+        <div class="title" style="float:left">
+        	<div style="float:left;"><?php echo $this->search_heading; ?></div>
+        	
+                
+        </div> 
+        
+        
+        
+        <br class="clear" />
+        	<table style="clear:both; width:695px; margin-top:2px;" cellpadding="0" cellspacing="0" border="0">
+            <?php if (count($this->paginator)): ?>
+            <tr>
+                <th width="130" align="center">Picture</th>
+				<th></th>
+                <th>Transaction</th>
+                <th>Total Rooms</th>
+                
+                <th>Location</th>
+                <th>Price ($)</th>
+                
+            </tr>
+            
+            <?php foreach ($this->paginator as $v): ?>
+            <tr class="color1" onmouseout="style.backgroundColor='#F3F5F6'" onclick="document.location.href='<?php echo ROOT_PATH.'details/'.$v['Id']; ?>'" onmouseover="this.style.cursor='pointer'; style.backgroundColor='#ffffff'" title="<?php echo $v['EstateTitle']; ?>" >
+				<td width="130" align="center"><a href="<?php echo ROOT_PATH.'details/'.$v['Id']; ?>"><img src="<?php echo get_estate_image_display_path($v['ImageName']); ?>"  class="img_left" alt="" title="" border="0"/></a></td>
+                <td></td>
+				 <td><?php echo get_transaction_status($v['TransactionType']); ?></td>
+                <td><?php echo $v['TotalRoom']; ?></td>
+                
+                <td><?php echo $v['City'].', '.$v['CountryName']; ?> </td>
+                <td><?php echo $v['Price']; ?></td>
+                
+            </tr>            
+            <?php endforeach; else: ?>
+                      
+                    <p class="noResult"><span>No Results Found</span></p>
+ 
+                  <?php endif; ?>     
+            
+                
+ 
+            
+            </table>
+        	
+
+           
+            
+    <?php if (count($this->paginator)):
+        echo $this->paginationControl($this->paginator,'Sliding','pagination/search_pagination.phtml');
+        endif;
+    
+     ?>
+        
+        </div><!-- end of column four -->
